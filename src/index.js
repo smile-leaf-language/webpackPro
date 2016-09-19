@@ -5,4 +5,4 @@ document.write(str);
 var write = s => {
     document.write(s);
 };
-write("dffjkdfj");
+write("你远没有自己想象的");

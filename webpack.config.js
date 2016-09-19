@@ -5,6 +5,10 @@ module.exports = {
         path: path.resolve("build"),
         filename:"bundle.js"
     },
+    devServer:{
+        port:8080,
+        contentBase:"./build"
+    },
     module:{
         loaders:[
             {
