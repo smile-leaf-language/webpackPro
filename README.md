@@ -7,6 +7,9 @@
 脚本  key(脚本的名字) and value(对应的cmd下执行的命令) 执行npm run 脚本名字（也就是执行脚本名字对应的cmd下的命令）
 当执行npm run 脚本名字的时候会node_modules/bin下找，找不到全局找，再找不到就报错
 ```
+
 > 请注意webpack.config.js这个文件名是定死的，不然会报Output filename not configured的错误；另外，如果不按这个命名，那么在webpack运行的时候需要通过--config这个参数指定配置文件，比如：webpack --config conf.js
-##### babel是一个工具，负责把es6变成es5 Babel是一个通用编译器，因此默认情况下它反而什么都不做,你必须明确地告诉Babel应该要做什么 在项目根目录下创建.babelrc文件,这是用来让Babel做你要它做的事情的配置文件
-##### webpack－dev－server 是express的http静态文件服务器,webpack－dev－server 打包到内存里不打包到硬盘上，为了提高效率，内存比硬盘读写快，这样读写内存更快！
+
+babel是一个工具，负责把es6变成es5 Babel是一个通用编译器，因此默认情况下它反而什么都不做,你必须明确地告诉Babel应该要做什么 在项目根目录下创建.babelrc文件,这是用来让Babel做你要它做的事情的配置文件
+
+webpack－dev－server 是express的http静态文件服务器,webpack－dev－server 打包到内存里不打包到硬盘上，为了提高效率，内存比硬盘读写快，这样读写内存更快！
