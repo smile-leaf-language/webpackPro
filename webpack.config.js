@@ -1,9 +1,17 @@
 var path = require("path");
+var jqueryPath = path.resolve("./lib/jquery.js");
+
 module.exports = {
-    entry: path.resolve(__dirname, "src/index.js"),
+    entry: path.resolve("src/index.js"),
     output: {
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve("build"),
         filename: "bundle.js"
+    },
+    resolve:{
+        extensions:["",".js",".css",".json",".less"],
+        alias:{
+            "jquery": jqueryPath
+        }
     },
     devServer: {
         port: 8080,
@@ -20,6 +28,19 @@ module.exports = {
                 test: /\.js$/,
                 loader: "babel-loader"
             },
-        ]
+            {
+                test: /\.less/,
+                loader: 'style!css!less'
+            },
+            {
+                test: /\.css/,
+                loader: 'style!css'
+            },
+            {
+                test: /\.()/,
+                loader: 'style!css'
+            },
+        ],
+        noParse:[jqueryPath]
     }
 };
